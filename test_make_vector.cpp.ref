@@ -1,0 +1,119 @@
+#include <vector>
+
+template<typename T>
+std::vector<T> make_vector(T t0)
+{
+    std::vector<T> v;
+    v.reserve(1);
+    v.pushback(t0);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1)
+{
+    std::vector<T> v;
+    v.reserve(2);
+    v.pushback(t0);
+    v.pushback(t1);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1, T t2)
+{
+    std::vector<T> v;
+    v.reserve(3);
+    v.pushback(t0);
+    v.pushback(t1);
+    v.pushback(t2);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1, T t2, T t3)
+{
+    std::vector<T> v;
+    v.reserve(4);
+    v.pushback(t0);
+    v.pushback(t1);
+    v.pushback(t2);
+    v.pushback(t3);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1, T t2, T t3, T t4)
+{
+    std::vector<T> v;
+    v.reserve(5);
+    v.pushback(t0);
+    v.pushback(t1);
+    v.pushback(t2);
+    v.pushback(t3);
+    v.pushback(t4);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1, T t2, T t3, T t4, T t5)
+{
+    std::vector<T> v;
+    v.reserve(6);
+    v.pushback(t0);
+    v.pushback(t1);
+    v.pushback(t2);
+    v.pushback(t3);
+    v.pushback(t4);
+    v.pushback(t5);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1, T t2, T t3, T t4, T t5, T t6)
+{
+    std::vector<T> v;
+    v.reserve(7);
+    v.pushback(t0);
+    v.pushback(t1);
+    v.pushback(t2);
+    v.pushback(t3);
+    v.pushback(t4);
+    v.pushback(t5);
+    v.pushback(t6);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1, T t2, T t3, T t4, T t5, T t6, T t7)
+{
+    std::vector<T> v;
+    v.reserve(8);
+    v.pushback(t0);
+    v.pushback(t1);
+    v.pushback(t2);
+    v.pushback(t3);
+    v.pushback(t4);
+    v.pushback(t5);
+    v.pushback(t6);
+    v.pushback(t7);
+    return v;
+}
+
+template<typename T>
+std::vector<T> make_vector(T t0, T t1, T t2, T t3, T t4, T t5, T t6, T t7, T t8)
+{
+    std::vector<T> v;
+    v.reserve(9);
+    v.pushback(t0);
+    v.pushback(t1);
+    v.pushback(t2);
+    v.pushback(t3);
+    v.pushback(t4);
+    v.pushback(t5);
+    v.pushback(t6);
+    v.pushback(t7);
+    v.pushback(t8);
+    return v;
+}
+

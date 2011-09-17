@@ -1,0 +1,19 @@
+#include <vector>
+
+/*#
+body = """\
+template<typename T>
+std::vector<T> make_vector(%s)
+{
+    std::vector<T> v;
+    v.reserve(%d);
+    %s
+    return v;
+}
+"""
+
+for nb_args in xrange(1, 10):
+    print body % (', '.join(['T t%d' % arg for arg in xrange(nb_args)]),
+                  nb_args,
+                  '\n    '.join(['v.pushback(t%d);' % arg for arg in xrange(nb_args)]))
+#*/
