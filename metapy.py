@@ -24,9 +24,10 @@ def run_code(code, global_context, output):
     try:
         exec(code, global_context)
     except:
+        sys.stdout = sys.__stdout__
         print "Exception in user code:"
         print '-'*60
-        traceback.print_exc(file=sys.stderr)
+        traceback.print_exc(file=sys.stdout)
         print '-'*60
     sys.stdout = sys.__stdout__
 
