@@ -12,6 +12,7 @@ It finds the python code inside a text file, runs it, and replaces it by the
 generated output.
 
 This is well adapted for generating C++ code. For instance, if:
+
 * you need variadic templates and cannot use c++11
 * you need to adapt an API several times (use of external libraries,
   client/server API, ...)
