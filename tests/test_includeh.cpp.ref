@@ -1,0 +1,25 @@
+#include "test_includeh.h"
+
+// use python context (global variables and functions) from associated header file
+
+
+//---- implementation of MyAPI set functions
+void MyAPI::set_handler_func1(const boost::function<void(double)>& sig)
+{
+    m_func1 = sig;
+}
+
+void MyAPI::set_handler_func2(const boost::function<void(int)>& sig)
+{
+    m_func2 = sig;
+}
+
+void MyAPI::set_handler_func3(const boost::function<void(std::string)>& sig)
+{
+    m_func3 = sig;
+}
+
+
+
+
+

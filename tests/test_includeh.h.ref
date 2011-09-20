@@ -1,0 +1,25 @@
+#ifndef TEST_INCLUDEH_H
+#define TEST_INCLUDEH_H
+
+#include <string>
+#include <boost/function>
+
+
+class MyAPI
+{
+public:
+    MyAPI();
+    ~MyAPI();
+
+    void set_handler_func1(const boost::function<void(double)>&);
+    void set_handler_func2(const boost::function<void(int)>&);
+    void set_handler_func3(const boost::function<void(std::string)>&);
+
+private:
+    boost::function<void(double)> m_func1;
+    boost::function<void(int)> m_func2;
+    boost::function<void(std::string)> m_func3;
+};
+
+
+#endif // guard

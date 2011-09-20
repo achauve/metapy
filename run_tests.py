@@ -6,7 +6,10 @@ from metapy import parse_file
 
 TEST_DIR = 'tests'
 
-TEST_FILES = ('test_make_vector.cpp',
+TEST_FILES = (
+    'test_make_vector.cpp',
+    'test_includeh.h',
+    'test_includeh.cpp',
     )
 
 class TestMetaPy(unittest.TestCase):

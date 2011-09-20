@@ -1,0 +1,22 @@
+#include "test_includeh.h"
+
+// use python context (global variables and functions) from associated header file
+//#include_h()
+
+
+//---- implementation of MyAPI set functions
+/*#
+body_function = """\
+void MyAPI::set_handler_%s(const %s& sig)
+{
+    m_%s = sig;
+}
+"""
+
+for name, type in callbacks:
+    print body_function % (name, callback_type(type), name)
+#*/
+
+
+
+

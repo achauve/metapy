@@ -32,12 +32,25 @@ def run_code(code, global_context, output):
     sys.stdout = sys.__stdout__
 
 
-def parse_file(filename):
+def include_h(filename, global_context):
+    remove_ext = lambda f : osp.splitext(f)[0]
+    basename = remove_ext(remove_ext(filename))
+    for ext in ('.h', '.hxx', '.hpp', '.txx'):
+        new_filename = basename + ext + '.meta'
+        if osp.exists(new_filename):
+            parse_file(new_filename, global_context)
+
+
+def parse_file(filename, global_context=None):
     f = open(filename)
     output = []
     current_code_block = None
-    global_context = {}
 
+    if global_context is None:
+        global_context = {}
+        global_context['include_h'] = partial(include_h, filename, global_context)
+
+    global_context['__file__'] = filename
     run = partial(run_code, global_context=global_context, output=output)
 
     for line in f:

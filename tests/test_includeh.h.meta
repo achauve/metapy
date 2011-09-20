@@ -1,0 +1,39 @@
+#ifndef TEST_INCLUDEH_H
+#define TEST_INCLUDEH_H
+
+#include <string>
+#include <boost/function>
+
+/*#
+
+callbacks = (
+    ('func1', 'double'),
+    ('func2', 'int'),
+    ('func3', 'std::string'),
+)
+
+def callback_type(type):
+    return 'boost::function<void(%s)>' % type
+
+#*/
+
+class MyAPI
+{
+public:
+    MyAPI();
+    ~MyAPI();
+
+/*#
+for name, type in callbacks:
+   print '    void set_handler_%s(const %s&);' % (name, callback_type(type))
+#*/
+
+private:
+/*#
+for name, type in callbacks:
+   print '    %s m_%s;' % (callback_type(type), name)
+#*/
+};
+
+
+#endif // guard
