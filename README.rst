@@ -26,7 +26,22 @@ code inside `/*# python code #*/` blocks, add a few prints and you're done.
 Example
 =======
 
-See test_make_vector.cpp.meta and the expected result test_make_vector.cpp.ref.
+* See `test_includeh.h.meta <https://github.com/achauve/metapy/blob/master/tests/test_includeh.h.meta>`_ and the expected result `test_includeh.h <https://github.com/achauve/metapy/blob/master/tests/test_includeh.h.ref>`_.
+
+* Generating the real files from the meta files can be easily integrated in your build environment. For example, with CMake, you can adapt the following macro::
+
+    # macro to process meta files in a given source directory
+    macro(meta src_dir) 
+    file(GLOB_RECURSE meta_src ${src_dir}/*.meta)
+        foreach(meta_file ${meta_src})
+            string(REPLACE ".meta" "" file_to_generate ${meta_file})
+            add_custom_command(OUTPUT ${file_to_generate}
+                               COMMAND python ${WHERE_IS_LOCATED_METAPY}/metapy.py ${meta_file}
+                               DEPENDS ${meta_file}
+            )
+            set(meta_gen ${meta_gen} ${file_to_generate})
+        endforeach()
+    endmacro()
 
 
 Tests
