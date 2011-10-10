@@ -20,7 +20,7 @@ This is well adapted for generating C++ code. For instance, if:
 you can use a few lines of simple python code instead of using very powerful
 yet super-complex unreadable-two-days-after very-long-to-compile and
 hard-to-debug-even-with-gcc--E boost::preprocessor-based macros! Insert python
-code inside '/*#\n python code \n#*/' blocks, add a few prints and you're done.
+code inside `/*# python code #*/` blocks, add a few prints and you're done.
 
 
 Example
